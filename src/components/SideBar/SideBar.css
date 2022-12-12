@@ -14,7 +14,7 @@
     height: 100vh;
     background-color: #000000c0;
     display: flex;
-    border-right: 1px var(--secondary) solid ;
+    border-right: 1px var(--secondary) solid;
 }
 
 .side-bar-user {
@@ -26,10 +26,10 @@
     font-size: 1.5vw;
     justify-content: start;
     align-items: center;
-    border-bottom:1px var(--secondary) solid ;
+    border-bottom: 1px var(--secondary) solid;
 }
 
-.side-bar-user>h3 {
+.side-bar-user>h5 {
     margin-left: 0.5vw;
 }
 
@@ -43,4 +43,9 @@
 .profile-picture:hover {
     height: 6vmin;
     width: 6vmin;
+}
+
+
+.invert {
+    filter: invert(1);
 }
