@@ -1,0 +1,46 @@
+:root {
+    --primary: #BB86FC;
+    --accent: #3700B3;
+    --secondary: #03DAC6;
+    --background: #121212;
+    --oncolor: #000000;
+    --onsurface: #FFFFFF;
+    --error: #CF6679;
+    --text: #EEEEEE;
+}
+
+.side-bar {
+    width: 18%;
+    height: 100vh;
+    background-color: #000000c0;
+    display: flex;
+    border-right: 1px var(--secondary) solid ;
+}
+
+.side-bar-user {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: var(--secondary);
+    font-size: 1.5vw;
+    justify-content: start;
+    align-items: center;
+    border-bottom:1px var(--secondary) solid ;
+}
+
+.side-bar-user>h3 {
+    margin-left: 0.5vw;
+}
+
+.profile-picture {
+    height: 4vmin;
+    width: 4vmin;
+    clip-path: circle();
+    margin-left: 0.2vw;
+}
+
+.profile-picture:hover {
+    height: 6vmin;
+    width: 6vmin;
+}

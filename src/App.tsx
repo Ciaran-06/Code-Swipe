@@ -7,7 +7,8 @@ import SideBar from './components/SideBar';
 function App() {
   return (
     <div className='container'>
-      <Header></Header>
+     {/* <Header></Header> */}
+     
       <SideBar user="10"></SideBar>
     </div>
   );

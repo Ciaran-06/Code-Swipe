@@ -16,7 +16,8 @@ class SideBar extends React.Component<any, any> {
         return (
             <div className="side-bar">
                 <div className="side-bar-user">
-                    <img src={String(this.getProfileImage(userID))}></img>
+                    <img src={String(this.getProfileImage(userID))} className="profile-picture"></img>
+                    <h3 id="side-bar-welocome-text">Welcome {String(this.getFirstName(userID))}</h3>
                 </div>
             </div>
         )
@@ -31,6 +32,10 @@ class SideBar extends React.Component<any, any> {
 
         console.log(queryString);
         return queryString;
+    }
+
+    getFirstName(id: string) {
+        return "Ciaran"; //placeholder for api
     }
 }
 
