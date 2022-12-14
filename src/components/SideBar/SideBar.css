@@ -30,22 +30,38 @@
 }
 
 .side-bar-user>h5 {
-    margin-left: 0.5vw;
+    margin-left: -0.5vw;
 }
 
 .profile-picture {
-    height: 4vmin;
-    width: 4vmin;
+    width: auto;
+    height: auto;
+    max-height: 6vh;
     clip-path: circle();
-    margin-left: 0.2vw;
+    margin-left: -0.8vw;
 }
 
 .profile-picture:hover {
-    height: 6vmin;
-    width: 6vmin;
+    max-height: 6.2vmin;
 }
 
 
 .invert {
     filter: invert(1);
+}
+
+
+.user-text-wrapper {
+ display: flex;
+ flex-direction: column;
+ margin-left: -1vw;
+ margin-right: auto;
+}
+
+#menu-icon {
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    align-self: center;
+    padding-right: 1vw;
 }

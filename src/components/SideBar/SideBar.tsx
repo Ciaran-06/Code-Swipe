@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./SideBar.css";
 
-import { CiDark } from "react-icons/ci";
-import { CiLight } from "react-icons/ci";
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+
+
+import "../MenuOption"
+import MenuOption from "../MenuOption";
 
 class SideBar extends React.Component<any, any> {
     constructor(props: any) {
@@ -20,10 +21,13 @@ class SideBar extends React.Component<any, any> {
             <div className="side-bar">
                 <div className="side-bar-user">
                     <img src={String(this.getProfileImage(userID))} className="profile-picture"></img>
-                    <h5 id="side-bar-welocome-text">Welcome {String(this.getFirstName(userID))}</h5>
-                    
+                    <div className="user-text-wrapper">
+                        <h5 id="side-bar-welocome-text">Welcome </h5>
+                        <h5>{String(this.getFirstName(userID))}.</h5>
+                    </div>
+                    <p><FaBars id="menu-icon" /></p>
                 </div>
-            </div>
+            </div >
         )
     }
 
@@ -32,30 +36,31 @@ class SideBar extends React.Component<any, any> {
             <img src={String(this.getProfileImage(userID))} className="profile-picture"></img>
         </div>
     }
+
     sideBarActivated(userID: string) {
         return (
             <div className="side-bar">
                 <div className="side-bar-user">
                     <img src={String(this.getProfileImage(userID))} className="profile-picture"></img>
                     <h5 id="side-bar-welocome-text">Welcome {String(this.getFirstName(userID))}</h5>
-                    <FaRegEye />
+                    <MenuOption dislpayText="test"></MenuOption>
                 </div>
             </div>
         )
     }
 
-    getProfileImage(id: string) {
+    getProfileImage(userID: string) {
         //query for users profile picutre matching with account id
 
         //placeholder for the now
-        const imageHost: string = "http://localhost:5050/";
-        let queryString: string = imageHost + id + ".jpg";
+        const imageHost: string = "https://ckcxhhagxgzjmdicienj.supabase.co/storage/v1/object/public/avatars/";
+        let queryString: string = imageHost + userID + ".jpg";
 
         console.log(queryString);
         return queryString;
     }
 
-    getFirstName(id: string) {
+    getFirstName(userID: string) {
         return "Ciaran"; //placeholder for api
     }
 
